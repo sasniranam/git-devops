@@ -4,7 +4,7 @@
    become: true
    tasks:
    - name: to instal te packae
-     yum: name=vsftpd state=latest
+     yum: name=httpd state=latest
    - name: to debu
      debug: 
        msg: "Successfully done"
