@@ -1,6 +1,6 @@
 ---
  - hosts: all
-   remote_user: jenkins
+   remote_user: ansible
    become: true
    tasks:
    - name: to instal te packae
