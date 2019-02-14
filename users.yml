@@ -11,3 +11,4 @@
         state: present
         regexp: '%wheel  ALL=(ALL)       ALL'
         line: 'ansadmin  ALL=(ALL)       NOPASSWD: ALL'
+...
