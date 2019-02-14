@@ -1,0 +1,14 @@
+---
+ - hosts: all
+   remote_user: ansible
+   become: true
+   tasks:
+     - user:
+        name: ansadmin
+        group: wheel
+     - lineinfile:
+        path: /etc/sudoers
+        state: present
+        regexp: '%wheel  ALL=(ALL)       ALL'
+        line: 'ansadmin  ALL=(ALL)       NOPASSWD: ALL'
+        validate: '/usr/sbin/visudo -cf %s'
